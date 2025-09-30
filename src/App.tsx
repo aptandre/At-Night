@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import './App.css'
 import Sign from './components/Sign/Sign';
 
@@ -24,16 +25,23 @@ function App() {
   ]
 
   const currentDate = new Date();
-  let dayIndex = currentDate.getDay();
-
-  dayIndex = 3;
+  const dayIndex = currentDate.getDay();
+  const hour = currentDate.getHours()
+  
+  const dailyColor = colors[dayIndex]
 
   const currentDayName = days[dayIndex];
-  const color = colors[dayIndex]
   
   return (
-    <div style={{ backgroundColor: color}}>
-      <Sign day={currentDayName}></Sign>
+    <div style={{ backgroundColor: dailyColor,
+      width: '80vw',
+      height: '80vh',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center'
+    }}
+    >
+      <Sign day={currentDayName} hour={hour}></Sign>
     </div>
   )
 }
