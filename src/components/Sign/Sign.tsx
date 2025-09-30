@@ -8,7 +8,6 @@ interface SignProps {
 const Sign = ({ day, hour }: SignProps) => {
     return (
         <div className="content">
-            
             <p className={styles.content}> 
                 {
                 hour > 18 ? `${day} à noite.` : `${day}`
