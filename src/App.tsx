@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import './App.css'
 import Sign from './components/Sign/Sign';
 
@@ -36,6 +35,8 @@ function App() {
     <div style={{ backgroundColor: dailyColor,
       width: '80vw',
       height: '80vh',
+      minWidth: '660px',
+      minHeight: '1000px',
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center'

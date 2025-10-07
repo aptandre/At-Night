@@ -6,11 +6,13 @@ interface SignProps {
 }
 
 const Sign = ({ day, hour }: SignProps) => {
+    console.log(hour)
     return (
         <div className="content">
             <p className={styles.content}> 
+                
                 {
-                hour > 18 ? `${day} à noite.` : `${day}`
+                hour >= 18 ? `${day} à noite.` : `${day}`
                 } 
             </p>
         </div>
